@@ -53,10 +53,10 @@ public class LauncherPagerAdapter extends FragmentStatePagerAdapter {
     public Fragment getItem(int pageNumber) {
         // Return the right fragment for given page number
         switch (pageNumber) {
-            case 0: // First page is the app drawer
+            case 1: // First page is the app drawer
                 return new TabbedAppDrawerFragment();
 
-            case 1: // Second page is the 'home screen'
+            case 0: // Second page is the 'home screen'
                 return new HomeScreenFragment();
 
             case 2: // Third page is the 'settings activity'
@@ -69,15 +69,15 @@ public class LauncherPagerAdapter extends FragmentStatePagerAdapter {
 
     @Override
     public int getCount() {
-        return 3;
+        return 1;
     }
 
     @Override
     public CharSequence getPageTitle(int pageNumber) {
         switch (pageNumber) {
-            case 0:
-                return _context.getString(R.string.text_app_drawer);
             case 1:
+                return _context.getString(R.string.text_app_drawer);
+            case 0:
                 return _context.getString(R.string.text_home_screen);
             case 2:
                 return _context.getString(R.string.text_settings_screen);

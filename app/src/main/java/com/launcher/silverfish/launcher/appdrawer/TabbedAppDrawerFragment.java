@@ -430,7 +430,7 @@ public class TabbedAppDrawerFragment extends Fragment {
                     case 0:
                         LauncherActivity activity = (LauncherActivity)getActivity();
                         activity.addShortcut(appName);
-                        activity.moveToScreen(1);
+                        activity.moveToScreen(0);
                         break;
                 }
             }

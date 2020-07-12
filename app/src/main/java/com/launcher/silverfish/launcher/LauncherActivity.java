@@ -79,7 +79,7 @@ public class LauncherActivity extends FragmentActivity
                         getSupportFragmentManager(), this);
         mViewPager = (ViewPager) findViewById(R.id.pager);
         mViewPager.setAdapter(mCollectionPagerAdapter);
-        mViewPager.setCurrentItem(getIntent().getIntExtra(START_PAGE, 1));
+        mViewPager.setCurrentItem(getIntent().getIntExtra(START_PAGE, 0));
 
         setDragListener();
     }
@@ -260,7 +260,7 @@ public class LauncherActivity extends FragmentActivity
         // Override the functionality of back and home key
         if ((keyCode == KeyEvent.KEYCODE_BACK || keyCode == KeyEvent.KEYCODE_HOME)&& event.isTracking()
                 && !event.isCanceled()) {
-            mViewPager.setCurrentItem(1);
+            mViewPager.setCurrentItem(0);
             return true;
         }
         return super.onKeyUp(keyCode, event);

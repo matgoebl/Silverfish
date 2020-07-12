@@ -377,7 +377,7 @@ public class HomeScreenFragment extends Fragment  {
         Intent pickIntent = new Intent(AppWidgetManager.ACTION_APPWIDGET_PICK);
         pickIntent.putExtra(AppWidgetManager.EXTRA_APPWIDGET_ID, appWidgetId);
         addEmptyData(pickIntent); // This is needed work around some weird bug.
-        startActivityForResult(pickIntent, REQUEST_PICK_APPWIDGET);
+//        startActivityForResult(pickIntent, REQUEST_PICK_APPWIDGET);
     }
 
     //endregion
